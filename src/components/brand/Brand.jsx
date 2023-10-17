@@ -6,7 +6,7 @@ const Brand = () => {
     const data = useLoaderData();
     console.log(data);
     return (
-        <div className='-mt-24 mb-8'>
+        <div className=' mb-8'>
             <h1 className='text-2xl font-bold text-center mb-5'>Our Brands</h1>
             <p className='font-medium text-sm text-center '>
             Discover Endless Shopping Possibilities.<br></br>
