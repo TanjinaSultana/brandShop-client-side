@@ -16,7 +16,10 @@ const Header = () => {
         
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <div className="ml-16 flex">
+     <img src="re-logo.png" className="w-[70px] h-[70px]" alt="logo" />
+    <h2 className=" mt-4 normal-case text-3xl">ReMerce</h2>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-2xl">

@@ -1,0 +1,56 @@
+[
+    {
+        "id":1,
+      "brand": "Amazon",
+      "brand_image": "https://i.ibb.co/gjMRmcB/amazon.jpg",
+      "name": "Echo Dot (3rd Gen) - Smart Speaker with Alexa",
+      "price": 34.99,
+      "type": "Electronics",
+      "short_description": "Compact smart speaker with Alexa, perfect for any room."
+    },
+    {  "id":2,
+      "brand": "Walmart",
+      "brand_image": "https://i.ibb.co/KVKjY8n/wallmart.jpg",
+      "name": "Pioneer Woman 10-Piece Cookware Set",
+      "price": 99.95,
+      "type": "Home & Kitchen",
+      "short_description": "A stylish and durable cookware set for your kitchen."
+    },
+    {
+        "id":3,
+      "brand": "Alibaba",
+      "brand_image": "https://i.ibb.co/D49N4KM/alibaba.png",
+      "name": "Smartphone X20 Pro",
+      "price": 299.99,
+      "type": "Electronics",
+      "short_description": "High-performance smartphone with advanced features."
+    },
+    {
+        "id":4,
+      "brand": "eBay",
+      "brand_image": "https://i.ibb.co/8d4TzVL/ebay.jpg",
+      "name": "Vintage Leather Messenger Bag",
+      "price": 49.99,
+      "type": "Fashion",
+      "short_description": "Classic leather messenger bag for a timeless look."
+    },
+    {
+        "id":5,
+      "brand": "Target",
+      "brand_image": "https://i.ibb.co/MBW8RsM/target.jpg",
+      "name": "Keurig K-Elite Single Serve Coffee Maker",
+      "price": 129.99,
+      "type": "Kitchen Appliances",
+      "short_description": "Brew your favorite coffee with this elegant machine."
+    },
+    {
+        "id":6,
+      "brand": "Best Buy",
+      "brand_image": "https://i.ibb.co/02QtYyf/bestbuy.jpg",
+      "name": "Samsung 55-Inch 4K Ultra HD Smart TV",
+      "price": 599.99,
+      "type": "Electronics",
+      "short_description": "Enjoy stunning visuals with this smart TV from Samsung."
+    }
+  ]
+  
