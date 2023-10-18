@@ -11,6 +11,7 @@ import Brand from './components/brand/Brand.jsx';
 import AddProduct from './components/addProduct/AddProduct.jsx';
 import BrandDb from './components/brandDB/BrandDb.jsx';
 import BrandDetails from './components/brandDetails/BrandDetails.jsx';
+import MyCart from './components/mycart/MyCart.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,13 @@ const router = createBrowserRouter([
       {
         path: "/add",
     element: <AddProduct></AddProduct>
+  
+      },
+      {
+        path: "/carts",
+    element: <MyCart></MyCart>,
+    loader: ()  => fetch(`http://localhost:5000/cart`)
+   
   
       },
       {

@@ -30,7 +30,7 @@ const Header = () => {
   </div>
   <div className="navbar-end">
     <a className="btn mr-4">Button</a>
-    <Link to="/cart" className=" btn mr-4">My Cart</Link>
+    <Link to="/carts" className=" btn mr-4">My Cart</Link>
   </div>
 </div>
         </div>
