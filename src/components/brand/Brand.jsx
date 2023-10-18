@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const Brand = () => {
     const data = useLoaderData();
-    console.log(data);
+    //console.log(data);
     return (
         <div className=' mb-8'>
             <h1 className='text-2xl font-bold text-center mb-5'>Our Brands</h1>

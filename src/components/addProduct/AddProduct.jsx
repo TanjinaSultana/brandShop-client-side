@@ -6,13 +6,25 @@ const AddProduct = () => {
         const form = e.target;
         const name = form.name.value;
         const image = form.image.value;
-        const brandName = form.brandName.value;
+        const brand = form.brand.value;
         const type = form.type.value;
         const shortDescription = form.shortDes.value;
         const price = form.price.value;
         const rating = form.Rating.value;
-        const addProduct ={name,image,brandName,type,shortDescription,price,rating};
+        const addProduct ={name,image,brand,type,shortDescription,price,rating};
         console.log(addProduct);
+
+        fetch('http://localhost:5000/brand',{
+          method:'POST',
+          headers:{
+            'content-type':'application/json'
+          },
+          body:JSON.stringify(addProduct)
+        })
+        .then(res =>res.json() )
+        .then(data=>{
+          console.log(data);
+        })
     }
     return (
         <div>
@@ -47,7 +59,7 @@ const AddProduct = () => {
   </label>
   <label className="input-group">
     
-    <input type="text" name='brandName' placeholder="Brand name" className="input input-bordered" />
+    <input type="text" name='brand' placeholder="Brand name" className="input input-bordered" />
   </label>
 </div>
                 <div className="form-control">
@@ -90,7 +102,7 @@ const AddProduct = () => {
   </label>
   <label className="input-group">
     
-    <input type="text" name='Rating' placeholder="Rating" className="input input-bordered" />
+    <input type="number" name='Rating' placeholder="Rating" className="input input-bordered" />
   </label>
 </div>                
                 </div>
