@@ -38,7 +38,9 @@ const {name,image,brand,type,shortDescription,price,rating,_id} = datas;
         
   <button className="btn btn-active" >Details</button>
       </Link>
+      <Link to={`/update/${_id}`}>
   <button className="btn">Update</button>
+      </Link>
  
 </div>
     </div>
