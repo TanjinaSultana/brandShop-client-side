@@ -9,7 +9,7 @@ const MyCart = () => {
         <div>
             <h1 className="text-2xl ">My Cart Item</h1>
             {
-                data?.map(data => <CartItem key={data._id} data={data}></CartItem> )
+                data?.map(data => <CartItem key={data._id} data={data}>X</CartItem> )
             }
         </div>
     );
