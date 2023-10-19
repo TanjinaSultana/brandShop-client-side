@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useLoaderData } from "react-router-dom";
 
 
@@ -13,8 +14,22 @@ const Update = () => {
         const shortDescription = form.shortDes.value;
         const price = form.price.value;
         const rating = form.Rating.value;
-        const addProduct ={name,image,brand,type,shortDescription,price,rating};
-        console.log(addProduct);
+        const updateProduct ={name,image,brand,type,shortDescription,price,rating};
+        console.log(updateProduct);
+        fetch(`http://localhost:5000/brand/${loadedUser._id}`,{
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
+              },
+              body:JSON.stringify(updateProduct)
+        })
+          .then(res =>res.json() )
+          .then(data=>{
+            console.log(data);
+            if(data.modifiedCount>0){
+                alert("submit succes");
+            }
+          })
     }
     return (
         <div className="mt-8 mb-10">
