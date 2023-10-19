@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
-
+import { useContext } from "react";
+import { AuthContext } from "../firebase/AuthProvider";
 const Header = () => {
+  const {user,logout} = useContext(AuthContext);
+  const handleLogOut = () =>{
+    logout().then()
+  }
+  console.log(user);
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -29,7 +35,19 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn mr-4">Button</a>
+  {
+     user?
+     (<div className="flex">
+
+   <div>
+   <img src={user?.photoURL} className="rounded-full w-[50px] h-[50px]" />
+      
+    <h4 className="font-normal text-xl">{user?.displayName}</h4>
+   </div>
+       <a className="btn " onClick={handleLogOut}>Logout</a>
+     </div>):
+     <Link to="/login" className="btn bg-[#FE612C]">Login</Link>
+   }
     <Link to="/carts" className=" btn mr-4">My Cart</Link>
   </div>
 </div>

@@ -13,6 +13,10 @@ import BrandDetails from './components/brandDetails/BrandDetails.jsx';
 import MyCart from './components/mycart/MyCart.jsx';
 import Update from './components/update/Update.jsx';
 import ErrorPage from './components/errorPage/ErrorPage.jsx';
+import AuthProvider from './components/firebase/AuthProvider.jsx';
+import Login from './components/login/Login.jsx';
+import Register from './components/register/Register.jsx';
+import PrivateRoute from './components/firebase/PrivateRoute.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,18 +30,26 @@ const router = createBrowserRouter([
       },
       {
         path: "/add",
-    element: <AddProduct></AddProduct>
+    element: 
+    <PrivateRoute>
+  <AddProduct></AddProduct>
+    </PrivateRoute>
   
       },
       {
         path: "/update/:_id",
-    element: <Update></Update>,
+    element: <PrivateRoute>
+
+      <Update></Update>
+    </PrivateRoute>,
     loader: ({params})  => fetch(`http://localhost:5000/brand/${params._id}`)
   
       },
       {
         path: "/carts",
-    element: <MyCart></MyCart>,
+    element: <PrivateRoute>
+      <MyCart></MyCart>
+    </PrivateRoute>,
     loader: ()  => fetch(`http://localhost:5000/cart`)
    
   
@@ -49,9 +61,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/:_id",
-        element: <BrandDetails></BrandDetails>,
+        element: <PrivateRoute>
+       <BrandDetails></BrandDetails>
+        </PrivateRoute>,
         loader: ()  => fetch(`http://localhost:5000/brand`)
        
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
      
       
@@ -61,6 +83,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
+
    <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
