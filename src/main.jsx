@@ -7,16 +7,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/home/Home.jsx';
-import Brand from './components/brand/Brand.jsx';
 import AddProduct from './components/addProduct/AddProduct.jsx';
 import BrandDb from './components/brandDB/BrandDb.jsx';
 import BrandDetails from './components/brandDetails/BrandDetails.jsx';
 import MyCart from './components/mycart/MyCart.jsx';
 import Update from './components/update/Update.jsx';
+import ErrorPage from './components/errorPage/ErrorPage.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path: "/",
