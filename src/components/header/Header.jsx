@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../firebase/AuthProvider";
 import {  FaCartArrowDown } from 'react-icons/fa';
-const Header = () => {
+const Header = ({toggleTheme}) => {
   const {user,logout} = useContext(AuthContext);
   const handleLogOut = () =>{
     logout().then()
   }
+ 
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -57,6 +58,7 @@ const Header = () => {
      ):
      <Link to="/login" className="btn border-none text-white bg-[#880ED4] mr-4">Login</Link>
    }
+    <button onClick={toggleTheme} className="btn mx-2">Theme</button>
     <Link to="/carts" className=" w-[20px] h-[50px] text-3xl mx-2  "> <FaCartArrowDown /></Link>
   </div>
 </div>

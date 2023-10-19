@@ -14,7 +14,7 @@ const BrandDb = () => {
     console.log(data);
     
     useEffect(() => {
-    const remainData = data?.filter((item) => item.brandName === brand);
+    const remainData = data?.filter((item) => item.brand === brand);
     if(remainData?.length == 0 ){
         setError("No Categories Are found ")
     }else{
@@ -65,7 +65,7 @@ const BrandDb = () => {
                 <h1 className='text-3xl mt-4 mb-5'>{error}</h1> 
             }
 
-               <div className='grid grid-cols-1 lg:grid-cols-4 gap-4'>
+               <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
 
                {
                 datas?.map(datas => <BrandCollection key={datas._id} datas={datas}></BrandCollection> )

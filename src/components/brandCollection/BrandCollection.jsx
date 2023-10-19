@@ -7,8 +7,8 @@ const {name,image,brand,type,shortDescription,price,rating,_id} = datas;
     return (
         <div className="mb-10 ">
         <div className="card w-96 bg-[#f4c8f9] shadow-xl ">
-  <figure className="">
-  <img src={image} className="w-[100px] h-[100px] rounded-xl shadow-2xl" />
+  <figure className="py-10">
+  <img src={image} className="w-[100px] h-[100px]  rounded-xl shadow-2xl" />
 
   </figure>
   <div className="card-body items-center text-center ">

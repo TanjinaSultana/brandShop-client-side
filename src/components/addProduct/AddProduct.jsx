@@ -26,7 +26,7 @@ const AddProduct = () => {
         .then(res =>res.json() )
         .then(data=>{
           console.log(data);
-          if(data.insertedId>0){
+          if(data.insertedId){
             toast.success("Data Added");
           }
         })
@@ -34,7 +34,7 @@ const AddProduct = () => {
     return (
         <div>
             <h1 className='text-3xl font-bold text-center mt-8 mb-8'>Add Product</h1>
-            <form className='mb-5 w-full max-w-sm shadow-2xl bg-[#f4c8f9] flex-shrink-0 text-center p-10 rounded-lg' onSubmit={handleAdd}>
+            <form className='mb-5 container mx-auto items-center rounded-lg  shadow-2xl bg-[#f4c8f9] py-10' onSubmit={handleAdd}>
                 <div className='flex flex-col gap-10 lg:w-1/3  lg:flex-row container mx-auto'>
 
                 <div className="form-control">
@@ -119,9 +119,11 @@ const AddProduct = () => {
     <input type="text" name='available' placeholder="Available" className="input input-bordered" />
   </label>
 </div>                
-                </div>
-              
-                <button className="btn btn-active btn-secondary mt-4 px-10">Add</button>
+               </div>
+               <div className='flex flex-col gap-10 lg:w-1/3  lg:flex-row container mx-auto'>
+
+                <button className="btn bg-[#880ED4] text-white  mt-4 px-10">Add</button>
+               </div>
             </form>
         </div>
     );

@@ -4,12 +4,12 @@ const Category = () => {
     return (
         <div className="my-10">
               <h1 className='text-2xl font-bold text-center mb-5'>Here Our Products Category</h1>
-            <p className='font-medium text-sm text-center '>
+            <p className='font-medium text-sm text-center mb-5 '>
            We Provide Various Categories Products.So That User Don't Have To Take Hassle.
             </p>
             <div className="carousel flex  ">
   <div id="slide1" className="carousel-item relative w-full">
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 mx-24">
   <div className="card card-compact w-72 bg-base-100 shadow-xl">
   <figure><img src="https://i.ibb.co/VQnGDd8/Furniture.webp" alt="Furniture" /></figure>
   <div className="card-body">
@@ -52,7 +52,7 @@ const Category = () => {
     </div>
   </div> 
   <div id="slide2" className="carousel-item relative w-full">
-  <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 mx-24">
   <div className="card card-compact w-72 bg-base-100 shadow-xl">
   <figure><img src="https://i.ibb.co/cYVdSBs/Fashion.webp" alt="Fashion" /></figure>
   <div className="card-body">
@@ -97,7 +97,7 @@ const Category = () => {
     </div>
   </div> 
   <div id="slide3" className="carousel-item relative w-full">
-  <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 mx-24">
   <div className="card card-compact w-72 bg-base-100 shadow-xl">
   <figure><img src="https://i.ibb.co/cYVdSBs/Fashion.webp" alt="Fashion" /></figure>
   <div className="card-body">
@@ -141,7 +141,7 @@ const Category = () => {
     </div>
   </div> 
   <div id="slide4" className="carousel-item relative w-full">
-  <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 mx-24">
   <div className="card card-compact w-72 bg-base-100 shadow-xl">
   <figure><img src="https://i.ibb.co/cYVdSBs/Fashion.webp" alt="Fashion" /></figure>
   <div className="card-body">
@@ -186,7 +186,7 @@ const Category = () => {
     </div>
   </div>
   <div id="slide5" className="carousel-item relative w-full">
-  <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 mx-24">
   <div className="card card-compact w-72 bg-base-100 shadow-xl">
   <figure><img src="https://i.ibb.co/cYVdSBs/Fashion.webp" alt="Fashion" /></figure>
   <div className="card-body">

@@ -12,7 +12,7 @@ const Brand = () => {
             Discover Endless Shopping Possibilities.<br></br>
                 Revolutionize Your Shopping Experience withour E-commerce Website.
             </p>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mx-12'>
 
         {
             data?.map(data => <Brands key={data.id} data={data}></Brands>)

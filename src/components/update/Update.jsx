@@ -35,7 +35,7 @@ const Update = () => {
     return (
         <div className="mt-8 mb-10">
             <h1 className='text-3xl font-bold text-center mt-8 mb-8'>Update Product</h1>
-            <form className='mb-5 w-full max-w-sm shadow-2xl bg-[#f4c8f9] flex-shrink-0 text-center p-10 rounded-lg' onSubmit={handleUpdate} >
+            <form className='mb-5 container mx-auto items-center rounded-lg  shadow-2xl bg-[#f4c8f9] py-10' onSubmit={handleUpdate} >
                 <div className='flex flex-col gap-10 lg:w-1/3  lg:flex-row container mx-auto'>
 
                 <div className="form-control">
@@ -110,10 +110,12 @@ const Update = () => {
     
     <input type="number" name='Rating' defaultValue={loadedUser?.rating} placeholder="Rating" className="input input-bordered" />
   </label>
-</div>                
+</div>          
                 </div>
-              
+<div className='flex flex-col gap-10 lg:w-1/3  lg:flex-row container mx-auto'>
                 <button className="btn border-none text-white bg-[#880ED4] mt-4 px-10">Submit</button>
+  </div>      
+              
             </form>
         </div>
     );
