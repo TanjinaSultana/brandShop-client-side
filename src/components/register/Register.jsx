@@ -48,13 +48,13 @@ const Register = () => {
     }
     return (
         <div>
-        <div className="hero min-h-screen bg-base-200">
-<div className="hero-content flex-col lg:flex-row-reverse">
-  <div className="text-center lg:text-left">
-    <h1 className="text-5xl font-bold">Register now!</h1>
-    <p className="py-6 font-normal">To Decorate Your Events With Us</p>
+        <div className="hero min-h-screen ">
+<div className="hero-content flex-col ">
+  <div className="text-center ">
+    <h1 className="text-3xl font-bold">Register now!</h1>
+    <p className="py-2 font-semibold">To Buy Your Desirable Products</p>
   </div>
-  <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+  <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#f4c8f9]">
     <form  className="card-body">
       <div className="form-control">
         <label className="label">
@@ -90,7 +90,7 @@ setImg(e.target.value)} type="text" placeholder="Image" className="input input-b
         </label>
       </div>
       <div className="form-control mt-6">
-        <button  onClick={handleRegister} className="btn  bg-[#FE612C] border-none" type='submit'>Register</button>
+        <button  onClick={handleRegister} className="btn  border-none text-white bg-[#880ED4]" type='submit'>Register</button>
         <label className="label">
             Already logged in?
             <Link to="/login" className="label-text-alt link link-hover underline text-xl">Login</Link>

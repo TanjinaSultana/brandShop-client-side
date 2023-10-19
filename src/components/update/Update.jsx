@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 
@@ -16,7 +17,7 @@ const Update = () => {
         const rating = form.Rating.value;
         const updateProduct ={name,image,brand,type,shortDescription,price,rating};
         console.log(updateProduct);
-        fetch(`http://localhost:5000/brand/${loadedUser._id}`,{
+        fetch(`https://brand-shop-server-side-two.vercel.app/brand/${loadedUser._id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -27,14 +28,14 @@ const Update = () => {
           .then(data=>{
             console.log(data);
             if(data.modifiedCount>0){
-                alert("submit succes");
+                toast.success("submit succes");
             }
           })
     }
     return (
         <div className="mt-8 mb-10">
             <h1 className='text-3xl font-bold text-center mt-8 mb-8'>Update Product</h1>
-            <form className='mb-5' onSubmit={handleUpdate} >
+            <form className='mb-5 w-full max-w-sm shadow-2xl bg-[#f4c8f9] flex-shrink-0 text-center p-10 rounded-lg' onSubmit={handleUpdate} >
                 <div className='flex flex-col gap-10 lg:w-1/3  lg:flex-row container mx-auto'>
 
                 <div className="form-control">
@@ -112,7 +113,7 @@ const Update = () => {
 </div>                
                 </div>
               
-                <button className="btn btn-active btn-secondary mt-4 px-10">Submit</button>
+                <button className="btn border-none text-white bg-[#880ED4] mt-4 px-10">Submit</button>
             </form>
         </div>
     );

@@ -5,44 +5,35 @@ const BrandCollection = ({datas}) => {
   
 const {name,image,brand,type,shortDescription,price,rating,_id} = datas;
     return (
-        <div className="mb-10">
+        <div className="mb-10 ">
+        <div className="card w-96 bg-[#f4c8f9] shadow-xl ">
+  <figure className="">
+  <img src={image} className="w-[100px] h-[100px] rounded-xl shadow-2xl" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div className="hero h-[300px] w-[600px] bg-base-200 flex-col lg:flex-row">
-  <div className="hero-content">
-    <img src={image} className="w-[200px] h-[200px] rounded-lg shadow-2xl" />
-    <div className="">
+  </figure>
+  <div className="card-body items-center text-center ">
       <h1 className="text-2xl font-bold">{name}</h1>
-      <h1 className="text-xl font-bold">{brand}</h1>
-      <span>{type}</span>
-      <p className="py-2 ">{shortDescription}</p>
-      <div className="">
-        <p>{price}</p>
-        <p>{rating}</p>
-      </div>
-      <div className="btn-group">
-      <Link to={`/${_id}`}>
-        
-  <button className="btn btn-active" >Details</button>
-      </Link>
-      <Link to={`/update/${_id}`}>
-  <button className="btn">Update</button>
-      </Link>
- 
-</div>
+      <h1 className="text-base font-bold">{brand}</h1>
+      <span className="text-base font-medium">Type:{type}</span>
+  <p className="font-semibold">{shortDescription}</p>
+
+  <div className="flex gap-2">
+
+  <p className="text-base font-medium ">Price:{price}</p>
+  <p className="text-sm font-medium">Rating:{rating}</p>
+  </div>
+
+    <div className="card-actions">
+  <div className="btn-group gap-5">
+  <Link to={`/${_id}`}>
+  
+  <button className="btn border-none text-white bg-[#880ED4]" >Details</button>
+  </Link>
+  <Link to={`/update/${_id}`}>
+  <button className="btn border-none text-white bg-[#880ED4]">Update</button>
+  </Link>
+  
+  </div>
     </div>
   </div>
 </div>

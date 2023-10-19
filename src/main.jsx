@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 
       <Update></Update>
     </PrivateRoute>,
-    loader: ({params})  => fetch(`http://localhost:5000/brand/${params._id}`)
+    loader: ({params})  => fetch(`https://brand-shop-server-side-two.vercel.app/brand/${params._id}`)
   
       },
       {
@@ -50,21 +50,21 @@ const router = createBrowserRouter([
     element: <PrivateRoute>
       <MyCart></MyCart>
     </PrivateRoute>,
-    loader: ()  => fetch(`http://localhost:5000/cart`)
+    loader: ()  => fetch(`https://brand-shop-server-side-two.vercel.app/cart`)
    
   
       },
       {
         path: "/brand/:brand",
         element: <BrandDb></BrandDb>,
-        loader: ()  => fetch(`http://localhost:5000/brand`)
+        loader: ()  => fetch(`https://brand-shop-server-side-two.vercel.app/brand`)
       },
       {
         path: "/:_id",
         element: <PrivateRoute>
        <BrandDetails></BrandDetails>
         </PrivateRoute>,
-        loader: ()  => fetch(`http://localhost:5000/brand`)
+        loader: ()  => fetch(`https://brand-shop-server-side-two.vercel.app/brand`)
        
       },
       {

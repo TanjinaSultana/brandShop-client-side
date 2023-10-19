@@ -17,7 +17,7 @@ const SocialLogin = () => {
     }
     return (
         <div className='ml-32'>
-             <button onClick={handleGoogle} className="btn bg-[#FE612C] border-none">Google</button>
+             <button onClick={handleGoogle} className="btn border-none text-white bg-[#880ED4]">Google</button>
             
         </div>
     );

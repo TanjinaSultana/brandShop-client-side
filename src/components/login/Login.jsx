@@ -36,13 +36,13 @@ if((email && password)){
     }
     return (
         <div>
-          <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero min-h-screen  my-10">
+  <div className="hero-content flex-col ">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6 font-normal">To Decorate Your Events With Us</p>
+      <h1 className="text-3xl font-bold">Login now!</h1>
+      <p className="py-2 font-medium text-base">To Buy Your Desirable Products</p>
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#f4c8f9]">
       <form className="card-body">
         <div className="form-control">
           <label className="label">
@@ -59,7 +59,7 @@ setEmail(e.target.value)} type="email" placeholder="email" className="input inpu
         </div>
           <p className='text-red-500 mt-2'>{error}</p>
         <div className="form-control mt-6">
-          <button className="btn bg-[#FE612C]" onClick={handleLogin}>Login</button>
+          <button className="btn border-none text-white bg-[#880ED4]" onClick={handleLogin}>Login</button>
           <label className="label">
             New Here?
             <Link to="/register" className="label-text-alt link link-hover text-xl">Register</Link>

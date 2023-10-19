@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 
 
 const AddProduct = () => {
@@ -11,10 +12,11 @@ const AddProduct = () => {
         const shortDescription = form.shortDes.value;
         const price = form.price.value;
         const rating = form.Rating.value;
-        const addProduct ={name,image,brand,type,shortDescription,price,rating};
+        const available = form.available.value;
+        const addProduct ={name,image,brand,type,shortDescription,price,rating,available};
         console.log(addProduct);
 
-        fetch('http://localhost:5000/brand',{
+        fetch('https://brand-shop-server-side-two.vercel.app/brand',{
           method:'POST',
           headers:{
             'content-type':'application/json'
@@ -24,12 +26,15 @@ const AddProduct = () => {
         .then(res =>res.json() )
         .then(data=>{
           console.log(data);
+          if(data.insertedId>0){
+            toast.success("Data Added");
+          }
         })
     }
     return (
         <div>
             <h1 className='text-3xl font-bold text-center mt-8 mb-8'>Add Product</h1>
-            <form className='mb-5' onSubmit={handleAdd}>
+            <form className='mb-5 w-full max-w-sm shadow-2xl bg-[#f4c8f9] flex-shrink-0 text-center p-10 rounded-lg' onSubmit={handleAdd}>
                 <div className='flex flex-col gap-10 lg:w-1/3  lg:flex-row container mx-auto'>
 
                 <div className="form-control">
@@ -103,6 +108,15 @@ const AddProduct = () => {
   <label className="input-group">
     
     <input type="number" name='Rating' placeholder="Rating" className="input input-bordered" />
+  </label>
+</div>                
+            <div className="form-control">
+                  <label className="label">
+              <span className="label-text">Available</span>
+  </label>
+  <label className="input-group">
+    
+    <input type="text" name='available' placeholder="Available" className="input input-bordered" />
   </label>
 </div>                
                 </div>

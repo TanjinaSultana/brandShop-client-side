@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../firebase/AuthProvider";
+import {  FaCartArrowDown } from 'react-icons/fa';
 const Header = () => {
   const {user,logout} = useContext(AuthContext);
   const handleLogOut = () =>{
     logout().then()
   }
-  console.log(user);
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -22,33 +22,42 @@ const Header = () => {
         
       </ul>
     </div>
-    <div className="ml-16 flex">
+    <div className=" flex ">
      <img src="re-logo.png" className="w-[70px] h-[70px]" alt="logo" />
     <h2 className=" mt-4 normal-case text-3xl">ReMerce</h2>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-2xl">
-    <Link to="/" className="btn mr-4">Home</Link>
-        <Link to="/add" className="btn mr-4">Add Product</Link>
+    <Link to="/" className="text-base font-medium mr-4">Home</Link>
+        <Link to="/add" className="text-base font-medium mr-4">Add Product</Link>
         
     </ul>
   </div>
   <div className="navbar-end">
   {
      user?
-     (<div className="flex">
-
-   <div>
-   <img src={user?.photoURL} className="rounded-full w-[50px] h-[50px]" />
-      
-    <h4 className="font-normal text-xl">{user?.displayName}</h4>
-   </div>
-       <a className="btn " onClick={handleLogOut}>Logout</a>
-     </div>):
-     <Link to="/login" className="btn bg-[#FE612C]">Login</Link>
+     (
+  <div className="dropdown dropdown-end">
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+        <img src={user?.photoURL} className="rounded-full w-[50px] h-[50px]" />
+        </div>
+      </label>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li>
+          <a className="justify-between">
+          <h4 className="font-normal text-xl">{user?.displayName}</h4>
+          </a>
+        </li>
+        
+        <li> <a className="btn border-none text-white bg-[#880ED4] mt-4 py-2 " onClick={handleLogOut}>Logout</a></li>
+      </ul>
+    </div>
+     ):
+     <Link to="/login" className="btn border-none text-white bg-[#880ED4] mr-4">Login</Link>
    }
-    <Link to="/carts" className=" btn mr-4">My Cart</Link>
+    <Link to="/carts" className=" w-[20px] h-[50px] text-3xl mx-2  "> <FaCartArrowDown /></Link>
   </div>
 </div>
         </div>
