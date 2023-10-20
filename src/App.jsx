@@ -9,13 +9,6 @@ import './dark-theme.css'
 import './light-theme.css'
 
 function App() {
-  // const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // const themeClass = isDarkMode ? 'dark-theme' : 'light-theme';
-
-  // const toggleTheme = () => {
-  //   setIsDarkMode(!isDarkMode);
-  // };
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);

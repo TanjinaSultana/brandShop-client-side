@@ -26,9 +26,9 @@ const BrandDetail = ({datas}) => {
     return (
         <div>
            <div className="hero my-10 rounded-lg
-            bg-base-200 h-screen">
+            bg-base-200 ">
   <div className="hero-content flex-col lg:flex-row">
-    <img src={image} className="  mr-10"></img>
+    <img src={image} className="w-[100px] h-[100px] mr-10"></img>
     <div className="max-w-md">
       <h1 className="text-5xl font-bold">{name}</h1>
       <h1 className="text-xl font-semibold">{brand}</h1>

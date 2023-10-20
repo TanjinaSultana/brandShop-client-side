@@ -62,7 +62,7 @@ const BrandDb = () => {
 
             {error && 
             
-                <h1 className='text-3xl mt-4 mb-5'>{error}</h1> 
+                <h1 className='text-3xl mt-4 mb-5 text-center'>{error}</h1> 
             }
 
                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>

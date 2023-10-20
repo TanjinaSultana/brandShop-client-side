@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../firebase/AuthProvider";
@@ -19,6 +20,8 @@ const Header = ({toggleTheme}) => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <Link to="/">Home</Link>
         <Link to="/add">Add Product</Link>
+        <button onClick={toggleTheme} className="mx-2">Theme</button>
+    <Link to="/carts" className=" w-[20px] h-[50px] text-3xl mx-2  "> <FaCartArrowDown /></Link>
        
         
       </ul>
@@ -58,8 +61,11 @@ const Header = ({toggleTheme}) => {
      ):
      <Link to="/login" className="btn border-none text-white bg-[#880ED4] mr-4">Login</Link>
    }
+   <div className="hidden lg:flex">
+
     <button onClick={toggleTheme} className="btn mx-2">Theme</button>
     <Link to="/carts" className=" w-[20px] h-[50px] text-3xl mx-2  "> <FaCartArrowDown /></Link>
+   </div>
   </div>
 </div>
         </div>

@@ -17,6 +17,7 @@ import AuthProvider from './components/firebase/AuthProvider.jsx';
 import Login from './components/login/Login.jsx';
 import Register from './components/register/Register.jsx';
 import PrivateRoute from './components/firebase/PrivateRoute.jsx';
+//import Root from './components/root/Root.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: "/",
     element: <Home></Home>,
-   loader:() => fetch('data.json'),
+   loader:() => fetch('/data.json'),
       },
       {
         path: "/add",
