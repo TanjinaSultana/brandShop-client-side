@@ -31,12 +31,14 @@ Follow these steps to set project up and running:
 6. install tailwind : `npm install -D tailwindcss postcss autoprefixer npx tailwindcss init -p`
 6. install daisyui : `npm i -D daisyui@latest`
 7. install toastify : `$ npm install react-hot-toats`
-Live Link : `https://brandshop-client-side-43a1b.web.app`
+<br>
 <a href="https://brandshop-client-side-43a1b.web.app">Live Link</a>
+<a href="https://github.com/TanjinaSultana/brandShop-client-side">Client-Side-Link</a>
+<a href="https://github.com/TanjinaSultana/brandShop-server-side">Server-Side-Link</a>
 
 ## Usage
 To use this brandShop-client-side application:
-• open the browser with this live link`https://brandshop-client-side-43a1b.web.app`
+• open the browser with this live link  <a href="https://brandshop-client-side-43a1b.web.app">Live Link</a>
 • Click the select button from the done.
 • Add the card in donate page.
 ## Contributing
