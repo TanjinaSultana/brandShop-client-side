@@ -36,6 +36,12 @@ Follow these steps to set project up and running:
 <a href="https://github.com/TanjinaSultana/brandShop-client-side">Client-Side-Link</a>
 <a href="https://github.com/TanjinaSultana/brandShop-server-side">Server-Side-Link</a>
 
+## Technology: 
+# Fronted:
+• React.js,JavaScript,Daisy Ui,Tailwind CSS And Html
+# Backend:
+• Express.js, MongoDB and Firebase
+
 ## Usage
 To use this brandShop-client-side application:
 • open the browser with this live link  <a href="https://brandshop-client-side-43a1b.web.app">Live Link</a>
